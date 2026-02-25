@@ -5,6 +5,6 @@ import pytest
 
 @pytest.mark.sanity
 def test_open_browser(open_obj):
-    
     print('Browser opened successfully.')
     open_obj.open_browser()
+
