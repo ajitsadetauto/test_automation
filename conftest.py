@@ -11,7 +11,7 @@ def open_obj(setup_teardown):
 
 @pytest.fixture(scope="session") 
 def setup_teardown(playwright:Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch()
     context = browser.new_context(record_video_dir="./video/")
     page = context.new_page()
     page.goto("https://www.automationtesting.co.uk/", wait_until="domcontentloaded", timeout=60000)
